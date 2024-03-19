@@ -1,2 +1,10 @@
-<h1>Pages#home</h1>
+<h1 class="btn btn-primary">Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
+
+<div data-controller = toggle>
+  <button data-action="click->toggle#fire"><i class="fa fa-bars"></i><i class="fa fa-bars"></i><i class="fa fa-bars"></i></button>
+  <div class = "mt-4 d-none" data-toggle-target="toggleableElement">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+</div>
