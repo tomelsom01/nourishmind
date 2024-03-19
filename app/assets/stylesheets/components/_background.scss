@@ -1,0 +1,17 @@
+.mainbackgroundcolour{
+  background-color:#EEE6DB;
+}
+.homebackgroundbanner{
+  background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1710847599/kaylee-garrett-GaprWyIw66o-unsplash_woe3vu.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex; /* Add this to enable flexbox */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  color: white;
+}

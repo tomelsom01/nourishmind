@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-custom navbar-mainbg navcolor">
+   <%= link_to root_path, class:"boxdisplay", style: "text-decoration: none;" do %>
+    <%= cl_image_tag("nourishbodymindLogo_buoeik", class: "navbanner", alt: "Nourish mind body logo") %>
+   <% end %>
+
+  <div data-controller = toggle>
+    <button data-action="click->toggle#fire"><i class="fa fa-bars"></i><i class="fa fa-bars"></i><i class="fa fa-bars"></i></button>
+    <div class = "mt-4 d-none" data-toggle-target="toggleableElement">
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+  </div>
+</nav>
