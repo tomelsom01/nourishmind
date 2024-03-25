@@ -16,5 +16,37 @@
 }
 
 .navcolor{
-  background-color: #EEE6DB;
+  background-color: #F2EFE8;
+}
+.navbar-nav1 {
+  display: flex;
+  justify-content: space-around; /* Adjust this according to your preference */
+  align-items: center; /* Align items vertically center */
+}
+
+.nav-item1 {
+  list-style: none; /* Remove default list styling */
+}
+
+.nav-link1 {
+  text-decoration: none; /* Remove underline from links */
+  color: #333; /* Set link color */
+  padding: 10px 15px; /* Add padding to links */
+}
+
+/* Optional: Add hover effect to links */
+.nav-link1:hover {
+  background-color: #f0f0f0; /* Change background color on hover */
+}
+
+@media (min-width: 576px) {
+  .smallerscreennav{
+    display: none;
+  }
+
+}
+@media (max-width: 576px) {
+  .largerscreennav{
+    display: none;
+  }
 }

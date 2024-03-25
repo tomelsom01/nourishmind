@@ -1,13 +1,41 @@
 <nav class="navbar navbar-expand-custom navbar-mainbg navcolor">
    <%= link_to root_path, class:"boxdisplay", style: "text-decoration: none;" do %>
-    <%= cl_image_tag("nourishbodymindLogo_buoeik", class: "navbanner", alt: "Nourish mind body logo") %>
+    <%= cl_image_tag("nourishbodymindLogo_edit_wwfrug", alt: "Nourish mind body logo") %>
    <% end %>
 
-  <div data-controller = toggle>
+   <div class="largerscreennav">
+    <ul class="navbar-nav1 d-flex me-2">
+      <li class="nav-item1">
+         <%= link_to "About", about_path, class: "nav-link1" %>
+      </li>
+      <li class="nav-item1">
+        <%= link_to "Price", price_path, class: "nav-link1" %>
+      </li>
+      <li class="nav-item1">
+        <%= link_to "Contact", contact_path, class: "nav-link1" %>
+      </li>
+      <li class="nav-item1">
+        <%= link_to "Blog", blog_path, class: "nav-link1" %>
+      </li>
+    </ul>
+   </div>
+
+  <div class="smallerscreennav" data-controller = toggle>
     <button data-action="click->toggle#fire"><i class="fa fa-bars"></i><i class="fa fa-bars"></i><i class="fa fa-bars"></i></button>
     <div class = "mt-4 d-none" data-toggle-target="toggleableElement">
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to "About", about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Price", price_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Contact", contact_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "News", blog_path, class: "nav-link" %>
+        </li>
+    </ul>
   </div>
 </nav>

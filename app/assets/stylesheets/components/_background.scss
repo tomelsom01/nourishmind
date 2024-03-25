@@ -1,17 +1,46 @@
 .mainbackgroundcolour{
-  background-color:#EEE6DB;
+  background-color:#F2EFE8;
 }
 .homebackgroundbanner{
   background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1710847599/kaylee-garrett-GaprWyIw66o-unsplash_woe3vu.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 40vh;
+  height: 100%;
   width: 100%;
   position: relative;
-  z-index: 1;
   display: flex; /* Add this to enable flexbox */
   justify-content: center; /* Center the content horizontally */
   align-items: center; /* Center the content vertically */
   color: white;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0px;
+}
+
+@media (max-width: 576px) {
+  .homebackgroundbanner{
+    background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1710847599/kaylee-garrett-GaprWyIw66o-unsplash_woe3vu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: flex; /* Add this to enable flexbox */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: white;
+    border-radius: 0;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+  }
 }
