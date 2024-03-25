@@ -39,6 +39,32 @@
   background-color: #f0f0f0; /* Change background color on hover */
 }
 
+.textblack2 {
+  color: #333; /* Text color */
+  text-decoration: none; /* Remove default underline */
+  position: relative;
+}
+
+/* Add an underline and make it transparent initially */
+.textblack2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the thickness of the underline */
+  bottom: 0;
+  left: 0;
+  background: #333; /* Color of the underline */
+  transform: scaleX(0); /* Initially invisible */
+  transform-origin: bottom;
+  transition: transform 0.3s ease; /* Transition for the underline */
+}
+
+/* Hover effect to slowly underline the text */
+.textblack2:hover::before {
+  transform: scaleX(1); /* Slowly underline on hover */
+}
+
+
 @media (min-width: 576px) {
   .smallerscreennav{
     display: none;

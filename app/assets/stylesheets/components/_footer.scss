@@ -3,6 +3,20 @@
   width: 100%;
 }
 
-.footerbanner{
-  height: 200px;
+
+
+.social-icons a {
+  margin-right: 10px; /* Add some space between the icons */
+}
+
+.social-icons a i {
+  color: black; /* Change the color of the icons to black */
+}
+.social-icons a i:hover {
+  color: #7b7b7b; /* Change the color of the icons to black */
+}
+
+.footerimage{
+  width: 20vw;
+  height: 20vw;
 }
