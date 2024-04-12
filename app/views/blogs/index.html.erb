@@ -29,6 +29,22 @@
     </div>
   </div>
 
+  <h1>All Blogs</h1>
+  <div class="container">
+    <div class="row">
+      <% @blogs.each do |blog| %>
+      <div class="col-sm-6">
+        <%= link_to "/blogs/#{blog.id}" do %>
+          <%= image_tag blog.image, class: "profileimage" if blog.image.present? %>
+          <h2><%= blog.title %></h2>
+          <p><%= truncate(blog.content, length: 200) %></p>
+        <% end %>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+
 
 
 </div>

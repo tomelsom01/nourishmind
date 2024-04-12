@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/price', to: 'pages#price'
   get '/blog', to: 'blogs#index'
   get '/contact', to: 'contact#index'
+  get "/blogs/:id", to: "blogs#show"
   resources :contacts, only: [:index, :create]
-
+  resources :blogs, only: [:index, :show]
 end
