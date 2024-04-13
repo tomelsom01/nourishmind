@@ -1,6 +1,10 @@
 .mainbackgroundcolour{
   background-color:#F2EFE8;
 }
+.showblogbackgroundcolour{
+  background-color:#FFFFF0;
+  height: 100%;
+}
 .homebackgroundbanner{
   background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1710847599/kaylee-garrett-GaprWyIw66o-unsplash_woe3vu.jpg');
   background-size: cover;
@@ -28,15 +32,14 @@
 }
 
 .blogbanner{
-  background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1710847599/kaylee-garrett-GaprWyIw66o-unsplash_woe3vu.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('https://res.cloudinary.com/daaxwngzv/image/upload/v1713041395/full-shot-woman-writing-notebook_faq7sm.jpg');
+  background-size: fill;
   background-repeat: no-repeat;
   height: 40vh;
   width: 100vw;
-  color: white;
+  color: black;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
-
+  text-shadow: 1px 1px black;
 }
 
 .blogbackground{

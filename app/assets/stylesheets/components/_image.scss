@@ -8,6 +8,19 @@
   max-width: 100%;
 }
 
+.profileimage1{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: calc(100% - calc(10rem * 2));
+  border-radius: 1.7rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2);
+  max-height: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .packageimages{
   width: 100%;
   border-radius: 1.7rem;

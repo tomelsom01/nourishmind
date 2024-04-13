@@ -8,36 +8,14 @@
     <h2 class="maintitle">Howdy!</h2>
     <p>Welcome to my blog, where I delve into the intricacies of my career journey, exploring the highs and lows that have shaped my growth amidst the bustling world around me. Join me as I unravel the strategies and styles that have been instrumental in my development, offering insights gleaned from my experiences navigating through the challenges and triumphs of professional life.</p>
   </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-6">
-        <%= cl_image_tag("rebecca_profile_pic_sivkox", class: "profileimage", alt: "Rebecca profile picture") %>
-        <h2>Finding Balance: Redefining Success through Health and Career Harmony</h2>
-      </div>
-      <div class="col-sm-6">
-        <%= cl_image_tag("rebecca_profile_pic_sivkox", class: "profileimage", alt: "Rebecca profile picture") %>
-        <h2>From Burnout to Rebirth: My Journey to Becoming a Health Coach</h2>
-      </div>
-      <div class="col-sm-6">
-        <%= cl_image_tag("rebecca_profile_pic_sivkox", class: "profileimage", alt: "Rebecca profile picture") %>
-        <h2>Embarking on a Journey of Self-Employment with a Wellness Coach by My Side</h2>
-      </div>
-      <div class="col-sm-6">
-        <%= cl_image_tag("rebecca_profile_pic_sivkox", class: "profileimage", alt: "Rebecca profile picture") %>
-        <h2>Nourishing the Mind: Exploring the Link Between Nutrition and Mental Health</h2>
-      </div>
-    </div>
-  </div>
 
-  <h1>All Blogs</h1>
-  <div class="container">
+  <div class="container pb-4">
     <div class="row">
       <% @blogs.each do |blog| %>
       <div class="col-sm-6">
-        <%= link_to "/blogs/#{blog.id}" do %>
+        <%= link_to "/blogs/#{blog.id}", style: "text-decoration: none;" do %>
           <%= image_tag blog.image, class: "profileimage" if blog.image.present? %>
-          <h2><%= blog.title %></h2>
-          <p><%= truncate(blog.content, length: 200) %></p>
+          <h3 class="blacktext"><%= blog.title %></h3>
         <% end %>
       </div>
       <% end %>
