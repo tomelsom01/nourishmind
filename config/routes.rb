@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
   get '/price', to: 'pages#price'
   get '/blog', to: 'blogs#index'
-  get '/contact', to: 'contact#index'
+  get '/contact', to: 'contact_forms#index'
   get "/blogs/:id", to: "blogs#show"
-  resources :contacts, only: [:index, :create]
+  resources :contacts
+  resources :contact_forms, only: [:new, :create]
   resources :blogs, only: [:index, :show]
 end
