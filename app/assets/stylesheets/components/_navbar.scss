@@ -64,6 +64,11 @@
   transform: scaleX(1); /* Slowly underline on hover */
 }
 
+.textgreen {
+  color: #4CAF50; /* Text color */
+}
+
+
 
 @media (min-width: 576px) {
   .smallerscreennav{
@@ -77,5 +82,35 @@
   }
   .navlogo{
     width: 140px;
+  }
+
+  .menu1{
+    margin-right: 2vw;
+  }
+
+  .menu2{
+    float: right;
+  }
+
+  .navbar-nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .nav-item{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f0;
   }
 }

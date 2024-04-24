@@ -21,9 +21,14 @@
    </div>
 
   <div class="smallerscreennav" data-controller = toggle>
-    <button data-action="click->toggle#fire"><i class="fa fa-bars"></i><i class="fa fa-bars"></i><i class="fa fa-bars"></i></button>
+
+    <span data-action="click->toggle#fire" class="material-symbols-outlined menu1">menu</span>
+
     <div class = "mt-4 d-none" data-toggle-target="toggleableElement">
       <ul class="navbar-nav">
+        <li><span data-action="click->toggle#fire" class="material-symbols-outlined nav-item menu2">
+          close
+        </span></li>
         <li class="nav-item">
           <%= link_to "About", about_path, class: "nav-link" %>
         </li>
