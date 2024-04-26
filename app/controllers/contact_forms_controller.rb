@@ -13,11 +13,10 @@ class ContactFormsController < ApplicationController
 
     if @contact_form.valid? && @contact_form.deliver
       flash[:notice] = 'Thank you! Your message has been sent successfully.'
-      redirect_to contact_path
     else
       flash[:alert] = 'Oops! Something went wrong. Please check the form and try again.'
-      render :new
     end
+    redirect_to contact_path
   end
 
   private

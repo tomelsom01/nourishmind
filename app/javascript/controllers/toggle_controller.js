@@ -7,3 +7,4 @@ export default class extends Controller {
     this.toggleableElementTarget.classList.toggle("d-none");
   }
 }
+
