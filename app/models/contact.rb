@@ -10,7 +10,7 @@ class Contact < MailForm::Base
       subject: "Contact Form Inquiry",
       to: "te28@hotmail.com",
       from: %("#{name}" <#{email}>),
-      reply_to: email
+      
     }
   end
 end

@@ -11,8 +11,9 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: "Nourish Mind & Body enquiry (Yes Bex you can do it!)",
-      to: "te28@hotmail.com",
-      from: %("#{name}" <#{email}>)
+      to: "rebecca.nourishmindbody@outlook.com",
+      from: %("#{name}" <#{email}>),
+      reply_to: %(<#{email}>)
     }
   end
 end
