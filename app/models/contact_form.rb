@@ -10,7 +10,7 @@ class ContactForm < MailForm::Base
   # in ActionMailer accepts.
   def headers
     {
-      subject: "Nourish Mind & Body enquiry (Yes Bex you can do it!)",
+      subject: "Nourish Mind & Body enquiry",
       to: "rebecca.nourishmindbody@outlook.com",
       from: %("#{name}" <#{email}>),
       reply_to: %(<#{email}>)

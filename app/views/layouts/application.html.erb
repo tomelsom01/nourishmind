@@ -12,15 +12,18 @@
   </head>
 
   <body>
-    <% if flash[:notice] %>
-      <div class="alert alert-success"><%= flash[:notice] %></div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger"><%= flash[:alert] %></div>
-    <% end %>
+
      <%= render partial: "layouts/partials/nav" %>
+
+      <% if flash[:notice] %>
+        <div class="alert alert-success close"><%= flash[:notice] %></div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger flashcenter closedanger" ><%= flash[:alert] %></div>
+      <% end %>
+      
     <%= yield %>
     <%= render partial: "layouts/partials/footer" %>
-    
+
   </body>
 </html>

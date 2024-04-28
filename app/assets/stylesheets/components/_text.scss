@@ -9,6 +9,17 @@
   background-color: #FFFFF0; /* You can replace "blue" with any color you prefer */
 }
 
+.hidden {
+  display: none;
+}
+
+.flashcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
 @media (min-width: 576px) {
   .imagetitle{
    display: none;
