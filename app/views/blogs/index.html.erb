@@ -14,7 +14,7 @@
       <% @blogs.each do |blog| %>
       <div class="col-sm-6">
         <%= link_to "/blogs/#{blog.id}", style: "text-decoration: none;" do %>
-          <%= image_tag blog.image, class: "profileimage" if blog.image.present? %>
+          <%= image_tag blog.image, class: "profileimage smallscreen" if blog.image.present? %>
           <h3 class="blacktext"><%= blog.title %></h3>
         <% end %>
       </div>
