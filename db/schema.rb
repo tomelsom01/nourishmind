@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_16_133758) do
+ActiveRecord::Schema[7.0].define(version: 2024_05_29_162635) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,6 +20,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_16_133758) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "yoga_class_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["yoga_class_id"], name: "index_bookings_on_yoga_class_id"
   end
 
   create_table "contact_forms", force: :cascade do |t|
@@ -35,4 +44,22 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_16_133758) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "yoga_classes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "yoga_classes"
 end
