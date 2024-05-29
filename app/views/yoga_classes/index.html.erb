@@ -1,0 +1,6 @@
+<h1>Yoga Classes</h1>
+
+<% @yoga_classes.each do |yoga_class| %>
+  <h2><%= link_to yoga_class.title, yoga_class %></h2>
+  <p><%= yoga_class.description %></p>
+<% end %>

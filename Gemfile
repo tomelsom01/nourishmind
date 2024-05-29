@@ -81,3 +81,5 @@ end
 gem "cloudinary"
 
 gem "mail_form"
+
+gem "devise"

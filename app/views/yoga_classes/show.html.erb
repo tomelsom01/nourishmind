@@ -1,0 +1,11 @@
+<h1><%= @yoga_class.title %></h1>
+<p><%= @yoga_class.description %></p>
+<p><%= @yoga_class.start_time %> - <%= @yoga_class.end_time %></p>
+
+<% if current_user %>
+  <%= form_with(model: [@yoga_class, @booking], local: true) do |form| %>
+    <%= form.submit "Book this class" %>
+  <% end %>
+<% else %>
+  <p>Please log in to book this class.</p>
+<% end %>
