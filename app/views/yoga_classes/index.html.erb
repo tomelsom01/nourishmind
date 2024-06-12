@@ -1,6 +1,30 @@
 <h1>Yoga Classes</h1>
 
-<% @yoga_classes.each do |yoga_class| %>
-  <h2><%= link_to yoga_class.title, yoga_class %></h2>
-  <p><%= yoga_class.description %></p>
+<%= link_to 'New Yoga Class', new_yoga_class_path %>
+
+<%= week_calendar(number_of_weeks: 1, events: @yoga_classes) do |date, yoga_classes| %>
+  <%= date.strftime("%d/%m") %>
+ <% yoga_classes.each do |yoga_class| %>
+
+      <div class="event mt-2">
+        <div class="title">
+          <%= link_to yoga_class.title, yoga_class, class: "booking-item1" %>
+        </div>
+         <div class="description">
+            <%= truncate(yoga_class.description, length: 100) %>
+            <%= link_to "Read more", yoga_class, class: "small text-muted"  %>
+        </div>
+        <div class="time">
+          <span class="material-symbols-outlined">calendar_month</span>
+          <span class="time-range"><%= date.strftime("%d/%m") %></span>
+        </div>
+        <div class="time">
+          <span class="material-symbols-outlined">schedule</span>
+          <span class="time-range"><%= yoga_class.start_time.strftime("%H:%M") %> - <%= yoga_class.end_time.strftime("%H:%M") %></span>
+        </div>
+
+        <%= link_to "Book", yoga_class, class: "btn btn-danger btn-sm w-100" %>
+      </div>
+    <% end %>
+
 <% end %>

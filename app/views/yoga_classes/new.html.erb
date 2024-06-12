@@ -1,0 +1,25 @@
+<h1>New Yoga Class</h1>
+
+<%= form_with(model: @yoga_class) do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.label :start_time %>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div>
+    <%= f.label :end_time %>
+    <%= f.datetime_select :end_time %>
+  </div>
+  <div>
+    <%= f.submit "Create Yoga Class" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', yoga_classes_path %>

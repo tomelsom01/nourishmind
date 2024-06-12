@@ -1,18 +1,17 @@
 class BookingsController < ApplicationController
   def create
     @yoga_class = YogaClass.find(params[:yoga_class_id])
-    @booking = @yoga_class.bookings.build(user: current_user)
-
+    @booking = @yoga_class.bookings.build(booking_params)
     if @booking.save
-      redirect_to @yoga_class, notice: 'Successfully booked!'
+      redirect_to @yoga_class, notice: 'Successfully booked the class.'
     else
-      redirect_to @yoga_class, alert: 'Booking failed.'
+      render 'yoga_classes/show'
     end
   end
 
-  def destroy
-    @booking = Booking.find(params[:id])
-    @booking.destroy
-    redirect_to @booking.yoga_class, notice: 'Booking cancelled.'
+  private
+
+  def booking_params
+    params.require(:booking).permit(:user_name)
   end
 end

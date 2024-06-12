@@ -83,3 +83,5 @@ gem "cloudinary"
 gem "mail_form"
 
 gem "devise"
+
+gem 'simple_calendar'

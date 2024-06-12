@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/blog', to: 'blogs#index'
   get '/contact', to: 'contact_forms#index'
   get "/blogs/:id", to: "blogs#show"
+  get '/booking', to: 'bookings#index'
+  get '/yoga_classes', to: 'yoga_classes#index'
+
   resources :contacts
   resources :contact_forms, only: [:new, :create]
   resources :blogs, only: [:index, :show]
