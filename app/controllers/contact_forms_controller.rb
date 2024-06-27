@@ -1,4 +1,5 @@
 class ContactFormsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
   def index
     # Initialize a new instance of ContactForm
     @contact_form = ContactForm.new

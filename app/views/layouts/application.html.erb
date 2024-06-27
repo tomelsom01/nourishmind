@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+
   </head>
 
   <body>
 
      <%= render partial: "layouts/partials/nav" %>
 
-      <% if flash[:notice] %>
-        <div class="alert alert-success close"><%= flash[:notice] %></div>
-      <% end %>
-      <% if flash[:alert] %>
-        <div class="alert alert-danger flashcenter closedanger" ><%= flash[:alert] %></div>
-      <% end %>
-      
+      <%= render "shared/flashes" %>
     <%= yield %>
+    <% if user_signed_in? %>
+      <h2>Hi <%= current_user.email %></h2>
+    <% end %>
     <%= render partial: "layouts/partials/footer" %>
 
   </body>
