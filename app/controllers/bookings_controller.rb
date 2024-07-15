@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to @yoga_class, notice: 'Successfully booked the class.'
+      redirect_to yoga_classes_path, notice: 'Successfully booked the class.'
     else
       render :new
     end
@@ -26,6 +26,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_name, :yoga_class_id)
+    params.require(:booking).permit(:yoga_class_id)
   end
 end

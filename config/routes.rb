@@ -20,4 +20,10 @@ Rails.application.routes.draw do
   resources :yoga_classes do
     resources :bookings
   end
+  namespace :admin do
+    resources :yoga_classes do
+      resources :users, only: [:index, :new, :create, :edit, :update, :destroy]
+    end
+  end
+
 end

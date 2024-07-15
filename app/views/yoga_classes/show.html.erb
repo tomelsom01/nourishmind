@@ -4,25 +4,18 @@
       <h1><strong><%= @yoga_class.title %></strong></h1>
       <div class="time2">
         <span class="material-symbols-outlined">schedule</span>
-        <p class=time-range2><%= @yoga_class.start_time.strftime("%H:%M") %> - <%= @yoga_class.end_time.strftime("%H:%M") %></p>
+        <p class="time-range2"><%= @yoga_class.start_time.strftime("%H:%M") %> - <%= @yoga_class.end_time.strftime("%H:%M") %></p>
       </div>
       <div class="time2">
-          <span class="material-symbols-outlined">calendar_month</span>
-           <span class="time-range2"><%= @yoga_class.start_time.strftime("%d/%m") %></span>
-      </div>
-      <div class="time2">
-
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span class="time-range2"><%= @yoga_class.start_time.strftime("%d/%m") %></span>
       </div>
 
       <p><%= @yoga_class.description %></p>
 
-
       <h2>Book this class</h2>
       <%= form_with(model: [@yoga_class, @booking]) do |f| %>
-        <div>
-          <%= f.label :user_name %>
-          <%= f.text_field :user_name %>
-        </div>
+        <%= f.hidden_field :yoga_class_id, value: @yoga_class.id %>
         <div>
           <%= f.submit "Book" %>
         </div>
