@@ -1,12 +1,20 @@
 <div class="container">
   <h1>Yoga Classes</h1>
   <% if user_signed_in? %>
-                    <p>Welcome, <%= current_user.name %></p>
-            <%= link_to 'Log Out', destroy_user_session_path, method: :get %>
-          <% else %>
-              <%= link_to 'Log In', new_user_session_path %> |
-              <%= link_to 'Sign Up', new_user_registration_path %>
-          <% end %>
+    <p>Welcome, <%= current_user.name %></p>
+    <%= link_to 'Log Out', destroy_user_session_path, method: :get %>
+  <% else %>
+    <%= link_to 'Log In', new_user_session_path %> |
+    <%= link_to 'Sign Up', new_user_registration_path %>
+  <% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'User Dashboard', users_dashboard_path %>
+  <% end %>
+
+  <% if admin_signed_in? %>
+    <%= link_to 'Admin Dashboard', admin_dashboard_path %>
+  <% end %>
+
 
 
   <%= link_to 'New Yoga Class', new_yoga_class_path %>

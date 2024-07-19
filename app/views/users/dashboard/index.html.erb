@@ -1,0 +1,10 @@
+<h1>My Yoga Classes</h1>
+
+<% @user_classes.each do |yoga_class| %>
+  <div>
+    <h2><%= yoga_class.title %></h2>
+    <p><%= yoga_class.description %></p>
+    <p>Start Time: <%= yoga_class.start_time.strftime("%Y-%m-%d %H:%M") %></p>
+    <p>End Time: <%= yoga_class.end_time.strftime("%Y-%m-%d %H:%M") %></p>
+  </div>
+<% end %>

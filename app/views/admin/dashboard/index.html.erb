@@ -1,0 +1,19 @@
+<div class="container mt-5 mb-5">
+  <h1>Yoga Classes Overview</h1>
+</div>
+<div class="container">
+  <% @yoga_classes.each do |yoga_class| %>
+    <div>
+      <h2><%= yoga_class.title %></h2>
+      <p><%= yoga_class.description %></p>
+      <p>Start Time: <%= yoga_class.start_time.strftime("%Y-%m-%d %H:%M") %></p>
+      <p>End Time: <%= yoga_class.end_time.strftime("%Y-%m-%d %H:%M") %></p>
+      <p>Participants: <%= yoga_class.users.count %></p>
+      <ul>
+        <% yoga_class.users.each do |user| %>
+          <li><%= user.name %> (<%= user.email %>)</li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>

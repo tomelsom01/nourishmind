@@ -7,4 +7,7 @@ class User < ApplicationRecord
   has_many :yoga_classes, through: :bookings
 
   validates :email, presence: true
+  def admin?
+    admin
+  end
 end
