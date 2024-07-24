@@ -1,0 +1,28 @@
+<h1>Participants in <%= @yoga_class.title %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td>
+          <%= link_to 'Edit', edit_admin_yoga_class_user_path(@yoga_class, user) %>
+          <%= link_to 'Delete', admin_yoga_class_user_path(@yoga_class, user), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Add New Participant', new_admin_yoga_class_user_path(@yoga_class) %>
+<%= link_to 'Back to Yoga Classes', admin_yoga_classes_path %>

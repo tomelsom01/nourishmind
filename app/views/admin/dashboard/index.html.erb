@@ -11,7 +11,13 @@
       <p>Participants: <%= yoga_class.users.count %></p>
       <ul>
         <% yoga_class.users.each do |user| %>
-          <li><%= user.name %> (<%= user.email %>)</li>
+          <li>
+            <%= user.name %> (<%= user.email %>)
+            <% if admin_signed_in? %>
+              <%= link_to 'Edit', edit_admin_yoga_class_user_path(yoga_class, user), class: "btn btn-warning btn-sm" %>
+              <%= link_to 'Delete', admin_yoga_class_user_path(yoga_class, user), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-sm" %>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div>
